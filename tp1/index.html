@@ -7,19 +7,80 @@
     <title>Food Store</title>
 </head>
 
-  <body>
-      <h1 class="title">Food Store</h1>
-      <hr><hr><hr><h2>Menu</h2><hr><hr>
+<body>
+    <header>
+        <h1 class="title">Food Store</h1>
+        <p>Comida casera..</p>
+        <nav>
+            <a href="index.html">Inicio</a> |
+            <a href="pedidos.html">Mis pedidos</a> |
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
 
-      
-      
-      <footer>
-        <p><br>Alumno: Aldo manfredi <br>
-          <a href="https://github.com/manfredialdo/UTN-TUPaD-P3">https://github.com/manfredialdo/UTN-TUPaD-P3</a>
-        </p>
-      </footer>
-      
-      
-      
-  </body>
+    <hr><hr><hr>
+    <h2>Menu</h2>
+    <hr><hr>
+
+    <aside>
+        <h3>Categorías</h3>
+        <ul>
+            <li><a href="#comida">Comidas</a></li>
+            <li><a href="#bebida">Bebidas</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section id="buscador">
+            <form>
+                <label for="buscar">Buscar producto:</label>
+                <input type="text" id="buscar" name="buscar" placeholder="Ej: Empanada...">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section id="comida">
+            <h2>Nuestro Menu</h2>
+
+            <article>
+                <img src="https://uploads.onecompiler.io/43w3pcqzf/44h3hag9j/chori.jpg" alt="Clásico choripán argentino con chimichurri casero en Food Store" title="el choripán de la casa, un clasico" width="150" height="150">
+                <h3>Choripán</h3>
+                <p>un clásico argentino: pan, chorizo de cerdo y chimi.</p>
+                <p>Precio: <strong>$1500</strong></p>
+                <button type="button">Agregar</button>
+            </article>
+
+            <br>
+
+            <article>
+                <img src="https://uploads.onecompiler.io/43w3pcqzf/44h3hag9j/empanada.jpg" alt="Foto de Empanada"> alt="las empanadas de Food Store " title="la empanada de la casa, con carne cortada a cuchillo" width="150" height="150">
+
+                <h3>Empanada</h3>
+                <p>Empanada salteña de carne cortada a cuchillo, frita y a leña.</p>
+                <p>Precio: <strong>$800</strong></p>
+                <button type="button">Agregar</button>
+            </article>
+        </section>
+
+        <hr>
+
+        <section id="bebida">
+            <article>
+                <img src="https://uploads.onecompiler.io/43w3pcqzf/44h3hag9j/visoda.jpg" alt="un totin con soda" title="vino con soda, un clasico" width="150" height="150">
+                <h3>vino con soda</h3>
+                <p>vino, soda y adentro.</p>
+                <p>Precio: <strong>$2500</strong></p>
+                <button type="button">Agregar</button>
+            </article>
+            </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Food Store · Aldo Manfredi</p>
+        <a href="https://github.com/manfredialdo/UTN-TUPaD-P3">Repositorio</a>
+    </footer>
+</body>
+
 </html>

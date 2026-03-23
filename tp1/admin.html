@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel de Administración</title>
+  </head>
+        
+  <body>
+    <header>
+      <h1 class="title">Panel de Administración</h1>
+      <h2><a target="_blank" href="index.html"> volver menu cliente</a></h2>
+    </header>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Categoría</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Acciones.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td><colspan = 4><img src="./assets/chori.jpg" alt="el choripan es monton de tripas de chancho todas condimentadas picadas metidas dentro de otra tripa y despues todas cocidas .. caliente salido de la parri todo eso metido dentro de un pan blanco... si te da la gana podes condimentarlo..." border=3 height=100 width=100></img></td>
+          <td>choripan</td>
+          <td>comida</td>
+          <td>1500</td>
+          <td>3</td>
+          <td>reservado</td>
+        </tr>      
+      </tbody>
+	  
+	  
+      <tbody>
+        <tr>
+          <td>02</td>
+          <td><colspan = 4><img src="./assets/empanada.jpg" alt="la empanada es ese tesoro de masa dorada, horneada o frita en grasa caliente hasta que burbujea... adentro guarda un corazón de carne cortada a cuchillo, mucha cebolla rehogada, pimentón del bueno y un juguito que casi cae por el brazo si no abrís bien las piernas para no mancharte... es el resumen de la felicidad envuelto en un repulgue..." border=3 height=100 width=100></img></td>
+          <td>empanada</td>
+          <td>comida</td>
+          <td>800</td>
+          <td>2</td>
+          <td>disponible</td>
+        </tr>      
+      </tbody>
+
+
+      <tbody>
+        <tr>
+          <td>3</td>
+          <td><colspan = 4><img src="./assets/visoda.jpg" alt="el vino con soda es ese tinto de mesa, fuerte y con cuerpo, que se doma con el golpe de burbujas del sifón bien frío... es el refresco de los dioses de barrio, servido en vaso de vidrio grueso con un par de hielos que tintinean mientras esperás el asado... un equilibrio entre la uva madura y el gas que te raspa la garganta justo como tiene que ser..." border=3 height=100 width=100></img></td>
+          <td>vino c soda</td>
+          <td>bebida</td>
+          <td>2500</td>
+          <td>5</td>
+          <td>disponible</td>
+        </tr>      
+      </tbody>
+
+    </table>
+
+<br><hr><br>
+
+    <section>
+        <details>
+            <summary><strong>Agregar Producto Rápido</strong>CLICK para expandir)</summary>
+            
+            <fieldset>
+                <legend><h2>Gestión de Inventario</h2></legend>
+                
+                <form>
+                    <div>
+                        <label for="nombre">Nombre del Producto:</label>
+                        <input type="text" id="nombre" name="nombre" 
+                               placeholder="Ej: Choripán" 
+                               required 
+                               minlength="3" maxlength="50"
+                               title="Ingrese el nombre (mínimo 3 caracteres)">
+                    </div>
+
+                    <div>
+                        <label for="precio">Precio ($):</label>
+                        <input type="number" id="precio" name="precio" 
+                               placeholder="0.00" 
+                               required 
+                               min="1" max="10000"
+                               title="El precio debe ser mayor a 0">
+                    </div>
+
+                    <div>
+                        <label for="categoria">Categoría:</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="" disabled selected>Seleccione una opción...</option>
+                            <option value="comida">Comida</option>
+                            <option value="bebida">Bebida</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="stock">Stock Actual:</label>
+                        <input type="number" id="stock" name="stock" 
+                               placeholder="Cantidad" 
+                               required 
+                               min="0"
+                               title="El stock no puede ser negativo">
+                    </div>
+
+                    <br>
+                    <button type="submit">Guardar en Inventario</button>
+                </form>
+            </fieldset>
+        </details>
+    </section>
+
+  </body>
+</html>

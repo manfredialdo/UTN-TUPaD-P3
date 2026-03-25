@@ -1,0 +1,47 @@
+<!--	
+<--Se deberá crear un archivo llamado login.html con su respectivo login.css. El 
+<--		documento debe contener un formulario de login centrado que incluya:
+<--		1. Logo o título de "Food Store".
+<--		2. Subtítulo (ej: "Iniciar Sesión").
+<--		3. Campo de email (input type="email").
+<--		4. Campo de contraseña (input type="password").
+		5. Botón de "Ingresar" que cambie de color al pasar el mouse.
+		6. Enlace a "¿No tenés cuenta? Registrate".-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store</title>
+</head>
+
+<body>
+    <header>
+        <h1>Food Store</h1>
+        <h2>Iniciar Sesión</h2>		
+
+    </header>
+    <form action="/procesar.php" id="login" method="post">
+        <fieldset>
+            <legend>INGRESAR</legend>
+
+            <label for="email">ingrese su email:</label>
+            <br>
+            <input type="email" id="email" name="email" title="ingrese su email de usuario" placeholder="email de usuario" required>
+            <br>
+            <br>
+
+            <label for="contrasena">contrasena:</label>
+            <br>
+            <input type="password" id="contrasena" name="contrasena" placeholder="contraseña" required title="ingrese su contraseña">
+            <br>
+            <br>
+
+        </fieldset>
+        <button type="submit">ingresar</button>
+		<p><a href="/procesar.php" target="_blank"> ¿No tenés cuenta? Registrate </a></p>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+/* 1. VARIABLES CSS  */
+:root {
+    --color-primario: #ff6347;
+    --color-fondo: #f0f0f0;
+    --color-texto: #333;
+    --color-blanco: #fff;
+    --color-borde: #ddd;
+    --color-focus: #ff4500;
+}
+
+/* 2. CENTRAR EL FORMULARIO */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la pantalla */
+    margin: 0;
+    background-color: var(--color-fondo);
+    font-family: sans-serif;
+}
+
+/* 3. MODELO DE CAJA (Contenedor del formulario) */
+.form-container {
+    background-color: var(--color-blanco);
+    padding: 30px;                     /* Espaciado interno */
+    margin: 20px;                      /* Espaciado externo */
+    border: 1px solid var(--color-borde); /* Borde */
+    border-radius: 12px;               /* Esquinas redondeadas */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Sombra */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* 4. TÍTULO PRINCIPAL */
+.login-title {
+    text-transform: uppercase; /* Requisito de la consigna */
+    color: var(--color-primario);
+    margin-bottom: 10px;
+}
+
+.form-group {
+    border: none;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* 5. ESTILIZAR INPUTS (Modelo de caja y ancho total) */
+.form-input {
+    width: 100%;              /* Requisito: width 100% */
+    padding: 12px;            /* Requisito: padding */
+    border: 1px solid var(--color-borde); /* Requisito: border */
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;   /* Para que el padding no rompa el ancho */
+}
+
+.form-input:focus {
+    border-color: var(--color-focus); /* Cambia el color del borde al hacer clic */
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Transición suave */
+}
+
+.btn-submit:hover {
+    background-color: var(--color-focus); /* Cambio visual al pasar el mouse */
+}

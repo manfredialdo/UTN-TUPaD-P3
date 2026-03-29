@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Store</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Food Store</title>
+    </head>
 
-<body>
     <header>
         <h1 class="title">Food Store</h1>
         <p>Comida casera..</p>
+        <!--○ Barra de navegación (<nav>) con enlaces a: "Inicio", "Mis Pedidos", "Carrito" y
+    un enlace especial que diga "Panel Admin" (que lleve al archivo admin.html).
         <nav>
             <a href="index.html">Inicio</a> |
             <a href="pedidos.html">Mis pedidos</a> |
             <a href="carrito.html">Carrito</a>
+        </nav>-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Mis Pedidos</a></li>
+                <li><a href="#">Carrito</a></li>
+            </ul>
+            <a href="admin.html">Panel Admin</a>
         </nav>
     </header>
 
+
+<body>
     <hr><hr><hr>
     <h2>Menu</h2>
     <hr><hr>
@@ -25,12 +36,13 @@
     <aside>
         <h3>Categorías</h3>
         <ul>
-            <li><a href="#comida">Comidas</a></li>
-            <li><a href="#bebida">Bebidas</a></li>
+            <li><a href="#">Comidas</a></li>
+            <li><a href="#">Bebidas</a></li>
         </ul>
     </aside>
 
     <main>
+        <!-- formulario Buscador: Un pequeño formulario con un input de búsqueda. -->
         <section id="buscador">
             <form>
                 <label for="buscar">Buscar producto:</label>
@@ -39,11 +51,18 @@
             </form>
         </section>
 
+
+        <!-- Grilla de Productos: Una sección con al menos 2 artículos (<article>). Cada
+            uno debe tener:
+                ■ Imagen del producto.
+                ■ Título (<h3>) y Descripción (<p>).
+                ■ Precio resaltado (<strong>).
+                ■ Botón "Agregar".-->
+
         <section id="comida">
             <h2>Nuestro Menu</h2>
-
             <article>
-                <img src="./assets/chori.jpg" alt="el choripan es monton de tripas de chancho todas condimentadas picadas metidas dentro de otra tripa y despues todas cocidas .. caliente salido de la parri todo eso metido dentro de un pan blanco... si te da la gana podes condimentarlo..." title="el chori de la casa" width="150" height="150">
+                <img src="./assets/chori.jpg" alt="el choripan es monton de tripas de chancho todas condimentadas picadas metidas dentro de otra tripa y despues todas cocidas .. caliente salido de la parri todo eso metido dentro de un pan blanco... si te da la gana hay aderezo..." title="el chori de la casa" width="150" height="150">
                 <h3>Choripán</h3>
                 <p>un clásico argentino: pan, chorizo de cerdo y chimi.</p>
                 <p>Precio: <strong>$1500</strong></p>
@@ -53,7 +72,7 @@
             <br>
 
             <article>
-                <img src="./assets/empanada.jpg" alt="la empanada es ese tesoro de masa dorada, horneada o frita en grasa caliente hasta que burbujea... adentro guarda un corazón de carne cortada a cuchillo, mucha cebolla rehogada, pimentón del bueno y ese juguito que te corre por el brazo si no abrís bien las piernas para no mancharte... es el resumen perfecto de la felicidad envuelto en un repulgue artesanal..." title="la empanada de la casa, con carne cortada a cuchillo" width="150" height="150">
+                <img src="./assets/empanada.jpg" alt="la empanada es ese tesoro de masa dorada, horneada o frita en grasa caliente hasta que burbujea... y q adentro guarda un corazón con carne cortada a cuchillo, mucha cebolla rehogada, morron y un juguito que se te corre por entre el brazo y si no abrís bien las piernas podes mancharte... es el resumen de la felicidad envuelto en un repulgue artesanal..." title="la empanada de la casa, con carne cortada a cuchillo" width="150" height="150">
 
                 <h3>Empanada</h3>
                 <p>Empanada salteña de carne cortada a cuchillo, frita y a leña.</p>
@@ -66,7 +85,7 @@
 
         <section id="bebida">
             <article>
-                <img src="./assets/visoda.jpg" alt="el vino con soda es ese tinto de mesa, fuerte y con cuerpo, que se doma con el golpe de burbujas del sifón bien frío... es el refresco de los dioses de barrio, servido en vaso de vidrio grueso con un par de hielos que tintinean mientras esperás el asado... un equilibrio entre la uva madura y el gas que te raspa la garganta justo como tiene que ser..." title="vino con soda, un clasico" width="150" height="150">
+                <img src="./assets/visoda.jpg" alt="el vino con soda es ese tinto en caja, fuerte y con cuerpo, que se doma con el golpe de burbujas del sifón bien frío... es el refresco de los dioses del barrio, servido en vaso de vidrio grueso con un par de hielos que tintinean mientras esperás el asado... es un equilibrio entre la uva madura y el gas que te raspa la garganta justo como tiene que ser..." title="vino con soda, un clasico" width="150" height="150">
                 <h3>vino con soda</h3>
                 <p>vino, soda y adentro.</p>
                 <p>Precio: <strong>$2500</strong></p>
@@ -74,13 +93,9 @@
             </article>
             </section>
     </main>
-
     <hr>
 
     <footer>
         <p>&copy; 2026 Food Store · Aldo Manfredi</p>
         <a href="https://github.com/manfredialdo/UTN-TUPaD-P3">Repositorio</a>
     </footer>
-</body>
-
-</html>

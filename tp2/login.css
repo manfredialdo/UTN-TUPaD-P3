@@ -12,7 +12,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif; /* Agregué una fuente para mejor estética */
+    font-family: Arial, sans-serif; 
 }
 
 body {
@@ -34,7 +34,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px; /* Limita el ancho en pantallas grandes */
+    max-width: 400px; 
 }
 
 .login-form h1 {
@@ -42,14 +42,14 @@ body {
     text-align: center;
     letter-spacing: 2px;
     font-size: 28px;
-    margin-bottom: 10px; /* Corregido: bottom */
+    margin-bottom: 10px; 
 }
 
 .login-form h2 {
     color: var(--color-texto);
     font-size: 18px;
     text-align: center;
-    margin-bottom: 20px; /* Corregido: bottom */
+    margin-bottom: 20px; 
 }
 
 label {
@@ -61,9 +61,9 @@ label {
 input {
     padding: 10px;
     border: 2px solid var(--color-borde);
-    border-radius: 5px; /* Faltaba punto y coma */
+    border-radius: 5px; 
     font-size: 14px;
-    margin-bottom: 15px; /* Corregido: bottom */
+    margin-bottom: 15px; 
 }
 
 /* --- ARREGLO DE LA PARTE INFERIOR --- */
@@ -115,5 +115,5 @@ input {
 input:focus {
     border: 2px solid lightblue;
     outline: none;
-    background-color: var(--color-fondo); /* Un tono sutil para que no sea blanco puro */
+    background-color: var(--color-fondo); 
 }

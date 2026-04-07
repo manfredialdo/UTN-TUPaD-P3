@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Food Store</h1>
+        <p>Comida casera..</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Mis Pedidos</a></li>
+                <li><a href="#">Carrito</a></li>
+                <li><a href="admin.html" class="enlace-especial">Panel Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+    <h2>Menu</h2>
+    <hr>
+
+    <aside>
+        <h3>Categorías</h3>
+        <ul>
+            <li><a href="#">Comidas</a></li>
+            <li><a href="#">Bebidas</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section id="buscador">
+            <form>
+                <label for="buscar">Buscar producto:</label>
+                <input type="text" id="buscar" name="buscar" placeholder="Ej: Empanada..." required>
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section id="contenedor-menu">
+            <h2>Nuestro Menu</h2>
+            <div id="productos-js"></div>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <p>&copy; 2026 Food Store</p>
+        <a href="https://github.com/manfredialdo/UTN-TUPaD-P3">Repo</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,67 +1,49 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-body{
+body {
     background-color: #20232a;
     color: #fff;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-h1{
-    color: aqua;
-    margin: 30px 0 10px;
-    font-size: 32px;
-    letter-spacing: 1px;
-}
+/* Navegación */
+nav ul, aside ul { list-style: none; display: flex; justify-content: center; gap: 15px; padding: 10px; }
+a { color: aqua; text-decoration: none; font-weight: bold; }
+a:hover { color: #fff; }
 
-.menu_container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px 40px 20px;
-}
+h1 { color: aqua; margin: 30px 0 10px; font-size: 32px; letter-spacing: 1px; }
 
-.tarjeta{
-   
+.menu_container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px 40px; }
+
+/* Tarjetas */
+.tarjeta {
     background-color: #2c2f36;
     border-radius: 12px;
     width: 200px;
-    padding: 30px;
-
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
 }
 
-.tarjeta h3{
-    margin: 8px 0 5px;
-    font-size: 18px;
-}
+.tarjeta img { height: 140px; object-fit: cover; border-radius: 8px; }
+.tarjeta h3 { margin: 8px 0 5px; font-size: 18px; }
+.tarjeta p { font-size: 14px; margin: 10px 0; color: #ccc; }
 
-.tarjeta img{
-    width: 100%;
-}
+.categoria-tag { background: #eee; color: #333; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: bold; align-self: center; }
+.precio-texto { font-size: 1.2rem; color: aqua; margin: 10px 0; }
 
-.tarjeta p{
-    font-size: 14px;
-    margin: 10px 0;
-    color: #ccc;
-}
-.categoria-tag {
-    background-color: #eee;
-    color: #333;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-size: 10px;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 5px;
-}
+/* Buscador e Inputs */
+#buscador form { display: flex; justify-content: center; align-items: center; gap: 10px; margin: 20px 0; }
+input { padding: 10px; border-radius: 5px; border: none; width: 250px; outline: none; }
 
-.precio-texto {
-    font-size: 1.2rem;
-    color: aqua; 
-    margin: 10px 0;
+.btn-agregar, button[type="submit"] { 
+    background: #ff6347; color: #fff; border: none; padding: 10px; border-radius: 5px; cursor: pointer; font-weight: bold; 
 }
+.btn-agregar { width: 100%; } /* Lo dejamos solo aquí para diferenciarlo del buscador */
+button[type="submit"] { padding: 10px 20px; }
+.btn-agregar:hover, button[type="submit"]:hover { background: #ff4500; }
+
+footer { margin-top: 40px; padding: 20px; border-top: 1px solid #444; }

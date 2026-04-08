@@ -1,6 +1,51 @@
-body {
-  font-family: system-ui;
-  background: #f06d06;
-  color: white;
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #20232a;
+    color: #fff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: aqua;
+    margin: 30px 0 10px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.personajes_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 40px 20px;
+}
+
+.tarjeta{
+   
+    background-color: #2c2f36;
+    border-radius: 12px;
+    width: 200px;
+    padding: 30px;
+
+}
+
+.tarjeta h3{
+    margin: 8px 0 5px;
+    font-size: 18px;
+}
+
+.tarjeta img{
+    width: 100%;
+}
+
+.tarjeta p{
+    font-size: 14px;
+    margin: 10px 0;
+    color: #ccc;
 }

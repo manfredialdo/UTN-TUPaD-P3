@@ -18,7 +18,7 @@ h1{
     letter-spacing: 1px;
 }
 
-.personajes_container{
+.menu_container{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

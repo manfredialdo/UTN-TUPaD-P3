@@ -1,4 +1,5 @@
-[
+// js/data.js
+const menu = [
       {
         id: 1,
         titulo: "Choripán",
@@ -26,4 +27,4 @@
         alt: "el vino con soda es ese tinto en caja, fuerte y con cuerpo, que se doma con el golpe de burbujas del sifón bien frío... es el refresco de los dioses del barrio, servido en vaso de vidrio grueso con un par de hielos que tintinean mientras esperás el asado... es un equilibrio entre la uva madura y el gas que te raspa la garganta justo como tiene que ser...",
         title: "vino con soda, un clasico"
       }
-    ]
+    ];

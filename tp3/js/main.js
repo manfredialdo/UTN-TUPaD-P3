@@ -1,46 +1,40 @@
-//definir una funcion de tipo asincrona
 const getDataApi = async () => {
   try {
-    //a esperar la respuesta del servidor
-    //fetch => llamar al servidor
-    //await espera al servidor
-    const response = await fetch("data.json",{
-        method :"GET"
-    });
-    //console.log(response);
-    //convertirmos a un objeto usable por javascript
+    // Apuntamos a la carpeta js donde está el json
+    const response = await fetch("js/data.json"); 
+    
+    // Convertimos la respuesta
     const data = await response.json();
-    mostrarPersonajes(data.results);
-    //data de la api
-    //console.log(data);
+    
+    // Como el JSON es un array directo, pasamos 'data' directamente
+    mostrarMenu(data);
+    
   } catch (error) {
-    console.error("Es un error personalizdo", error);
+    console.error("Error al cargar los datos:", error);
   }
 };
 
-const mostrarPersonajes = (personajes = []) => {
-  //console.log("estoy en la funcioon",personajes);
-  //vamos a obtener del html el contenedor
+const mostrarMenu = (productos = []) => {
   const contenedor = document.getElementById("container");
-  personajes.forEach((personaje) => {
-    const tarjeta = document.createElement("div");
-    tarjeta.classList.add("tarjeta", "tarjeta_2");
+  
+  // Limpiamos el contenedor por si acaso
+  contenedor.innerHTML = "";
+
+  productos.forEach((producto) => {
+    const tarjeta = document.createElement("article"); // Usamos article para mejor semántica
+    tarjeta.classList.add("tarjeta");
+    
     tarjeta.innerHTML = `
-    <img src="${personaje.image}"/>
-    <h3>${personaje.name}</h3>
-    <p><b>Status:</b> ${personaje.status}</p>
-    <p><b>Especie:</b> ${personaje.species}</p>
+        <img src="${producto.imagen}" alt="${producto.alt}" title="${producto.title}"/>
+        <h3>${producto.titulo}</h3>
+        <p>${producto.descripcion}</p>
+        <p><b>Precio:</b> $${producto.precio}</p>
+        <button type="button">Agregar</button>
     `;
-    //console.log(personaje);
+    
     contenedor.appendChild(tarjeta);
   });
 };
 
-/*
-  fetch("https://rickandmortyapi.com/api/character")
-  .then( res => res.json())
-  .then( data => console.log("then",data))
-  .catch(error => console.log(error))
-*/
-
+// Ejecutamos la función
 getDataApi();

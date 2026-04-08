@@ -1,40 +1,27 @@
-const getDataApi = async () => {
-  try {
-    // Apuntamos a la carpeta js donde está el json
-    const response = await fetch("js/data.json"); 
+const mostrarMenu = (datos) => {
+    const contenedor = document.getElementById("container");
     
-    // Convertimos la respuesta
-    const data = await response.json();
-    
-    // Como el JSON es un array directo, pasamos 'data' directamente
-    mostrarMenu(data);
-    
-  } catch (error) {
-    console.error("Error al cargar los datos:", error);
-  }
+    // Limpiamos el contenedor por si hay contenido previo
+    contenedor.innerHTML = "";
+
+    datos.forEach((producto) => {
+        // Creamos el elemento tarjeta
+        const tarjeta = document.createElement("article");
+        tarjeta.classList.add("tarjeta");
+
+        // Inyectamos el HTML con los datos del array
+        tarjeta.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.alt}" title="${producto.title}">
+            <h3>${producto.titulo}</h3>
+            <p>${producto.descripcion}</p>
+            <p><strong>$${producto.precio}</strong></p>
+            <button type="button" class="btn-agregar">Agregar</button>
+        `;
+
+        // Agregamos la tarjeta al contenedor del index
+        contenedor.appendChild(tarjeta);
+    });
 };
 
-const mostrarMenu = (productos = []) => {
-  const contenedor = document.getElementById("container");
-  
-  // Limpiamos el contenedor por si acaso
-  contenedor.innerHTML = "";
-
-  productos.forEach((producto) => {
-    const tarjeta = document.createElement("article"); // Usamos article para mejor semántica
-    tarjeta.classList.add("tarjeta");
-    
-    tarjeta.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.alt}" title="${producto.title}"/>
-        <h3>${producto.titulo}</h3>
-        <p>${producto.descripcion}</p>
-        <p><b>Precio:</b> $${producto.precio}</p>
-        <button type="button">Agregar</button>
-    `;
-    
-    contenedor.appendChild(tarjeta);
-  });
-};
-
-// Ejecutamos la función
-getDataApi();
+// Llamamos a la función pasando nuestra constante 'menu' de data.js
+mostrarMenu(menu);

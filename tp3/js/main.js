@@ -2,7 +2,7 @@
 
 const cargarCategorias = (lista) => {
     const ulCategorias = document.getElementById("lista-categorias");
-    ulCategorias.innerHTML = ""; // Limpiar
+    ulCategorias.innerHTML = ""; // Limpia
 
     lista.forEach(cat => {
         const li = document.createElement("li");        

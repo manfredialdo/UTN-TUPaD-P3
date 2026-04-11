@@ -2,60 +2,40 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Store</title>
-	<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header>
-        <h1 class="title">Food Store</h1>
-        <p>Comida casera..</p>
+        <h1>Food Store</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Mis Pedidos</a></li>
-                <li><a href="#">Carrito</a></li>
-                <li><a href="admin.html" class="enlace-especial">Panel Admin</a></li>
-            </ul>
+            <a href="#">Inicio</a>
+            <a href="#">Mis Pedidos</a>
+            <a href="#">Carrito</a>
+            <a href="admin.html">Panel Admin</a>
         </nav>
     </header>
 
-    <hr>
-    <h2>Menu</h2>
-    <hr>
-
     <aside>
-        <h3>Categorías</h3>
-        <ul>
-            <li><a href="#">Comidas</a></li>
-            <li><a href="#">Bebidas</a></li>
-        </ul>
+        <h2>Categorías</h2>
+        <ul id="lista-categorias"></ul>
     </aside>
 
     <main>
-        <section id="buscador">
-            <form>
-                <label for="buscar">Buscar producto:</label>
-                <input type="text" id="buscar" name="buscar" placeholder="Ej: Empanada..." required>
-                <button type="submit">Buscar</button>
-            </form>
-        </section>
-
-        <section id="menu">
-            <h2>Nuestro Menu</h2>
-            <div id="container" class="menu_container"></div>
-        </section>
+        <form id="form-busqueda">
+            <input type="text" id="input-busqueda" placeholder="Buscar productos...">
+            <button type="submit">Buscar</button>
+        </form>
+        <h2>Productos Destacados</h2>
+        <section id="contenedor-productos"></section>
     </main>
 
-    <hr>
-
-
-
-<footer>
-        <p>&copy; 2026 Food Store</p>
-        <a href="https://github.com/manfredialdo/UTN-TUPaD-P3" target="_blank">Repo</a>
+    <footer>
+        <p>© 2024 Food Store. Todos los derechos reservados.</p>
+        <p>Contacto: info@foodstore.com</p>
     </footer>
-	<script src="js/data.js"></script>
-    <script src="js/main.js"></script>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
